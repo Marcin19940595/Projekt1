@@ -1,10 +1,11 @@
 package com.example.Samochody.domain.repository;
 
 import com.example.Samochody.domain.Ciężarowe;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
 import java.util.Collection;
-
+@Repository
 public interface CiężaroweRepository {
 
     void createCięzarowe(String marka, String model);
@@ -19,4 +20,6 @@ public interface CiężaroweRepository {
     void build();
 
     void createCiężarowe(Ciężarowe ciężarowe);
+
+    void createCięzarowe(Ciężarowe ciężarowe);
 }

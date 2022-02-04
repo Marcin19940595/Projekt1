@@ -1,12 +1,13 @@
 package com.example.Samochody.domain.repository;
 
 import com.example.Samochody.domain.Ciężarowe;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-
+@Repository
 public class InMemoryRepository implements CiężaroweRepository{
 
     Map<String, Ciężarowe> ciężarowes = new HashMap<>();
@@ -23,12 +24,12 @@ public class InMemoryRepository implements CiężaroweRepository{
         return ciężarowes.values();
     }
     @Override
-    public Ciężarowe getCiężarowe(String model){
-        return ciężarowes.get(model);
+    public Ciężarowe getCiężarowe(String marka){
+        return ciężarowes.get(marka);
     }
     @Override
-    public void removeCiężarowe(String model){
-        ciężarowes.remove(model);
+    public void removeCiężarowe(String marka){
+        ciężarowes.remove(marka);
     }
     @Override
     @PostConstruct

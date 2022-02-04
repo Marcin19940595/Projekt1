@@ -1,9 +1,9 @@
 package com.example.Samochody.domain;
 
 public class Spalanie {
-    private int description;
+    private String description;
 
-    public Spalanie(int description) {
+    public Spalanie(String description) {
         this.description = description;
     }
     public String toString(){
