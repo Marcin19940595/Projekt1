@@ -8,7 +8,7 @@ import java.util.Collection;
 @Repository
 public interface CiężaroweRepository {
 
-    void createCięzarowe(String marka, String model);
+    void createcięzarowe(String marka, String model);
 
     Collection<Ciężarowe> getAllCiężarowe();
 
@@ -21,5 +21,5 @@ public interface CiężaroweRepository {
 
     void createCiężarowe(Ciężarowe ciężarowe);
 
-    void createCięzarowe(Ciężarowe ciężarowe);
+    void createcięzarowe(Ciężarowe ciężarowe);
 }

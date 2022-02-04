@@ -16,7 +16,7 @@ public class InMemoryRepository implements CiężaroweRepository{
 
     }
     @Override
-    public void createCięzarowe(String marka, String model){
+    public void createcięzarowe(String marka, String model){
         ciężarowes.put(marka, new Ciężarowe(marka,model));
     }
     @Override
@@ -34,13 +34,19 @@ public class InMemoryRepository implements CiężaroweRepository{
     @Override
     @PostConstruct
     public void build(){
-        createCięzarowe("Scania","Awargo");
-        createCięzarowe("Daf","Mikosa");
+        createcięzarowe("Scania","Awargo");
+        createcięzarowe("Daf","Mikosa");
     }
     @Override
     public void createCiężarowe(Ciężarowe ciężarowe){
         ciężarowes.put(ciężarowe.getMarka(), ciężarowe);
     }
+
+    @Override
+    public void createcięzarowe(Ciężarowe ciężarowe) {
+
+    }
+
     @Override
     public String toString(){
         return "CiężaroweReository{" + "ciężarowe = " + ciężarowes + '}';

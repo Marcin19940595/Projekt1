@@ -16,6 +16,10 @@ public class Ciężarowe {
 
     }
 
+    public Ciężarowe() {
+
+    }
+
     public String getMarka() {
         return marka;
     }
